@@ -1,0 +1,25 @@
+{
+  "searches": [
+    {
+      "search_term": "running shoes",
+      "product_type": "Running Shoes",
+      "audiences": ["men"],
+      "include": [],
+      "exclude": ["sock", "insole"]
+    }
+  ],
+  "marketplaces": [
+    "zalando.at", "zalando.be", "zalando.bg", "zalando.hr", "zalando.cz",
+    "zalando.dk", "zalando.ee", "zalando.fi", "zalando.fr", "zalando.de",
+    "zalando.gr", "zalando.hu", "zalando.ie", "zalando.it", "zalando.lv",
+    "zalando.lt", "zalando.lu", "zalando.nl", "zalando.no", "zalando.pl",
+    "zalando.pt", "zalando.ro", "zalando.sk", "zalando.si", "zalando.es",
+    "zalando.se", "zalando.ch", "zalando.co.uk"
+  ],
+  "headless": true,
+  "pages": 1,
+  "retries": 2,
+  "delay_seconds": [2.5, 4.5],
+  "enrich_details": false,
+  "output_dir": "output"
+}

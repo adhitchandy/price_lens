@@ -1,0 +1,28 @@
+{
+  "searches": [
+    {
+      "search_term": "digital camera",
+      "product_type": "Digital Camera",
+      "include": ["camera", "mirrorless", "dslr"],
+      "exclude": ["case", "battery", "charger", "toy", "webcam"]
+    }
+  ],
+  "marketplaces": ["amazon.de"],
+  "headless": true,
+  "set_location": true,
+  "postcodes": {
+    "amazon.de": "10115"
+  },
+  "pages": 2,
+  "retries": 2,
+  "delay_seconds": [1.5, 3.5],
+  "output_dir": "output",
+  "cleaning": {
+    "remove_sponsored": true,
+    "remove_no_price": true,
+    "remove_no_rating": false,
+    "remove_duplicates": true,
+    "remove_outliers": true,
+    "outlier_pct": 99
+  }
+}

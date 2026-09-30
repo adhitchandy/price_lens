@@ -1,0 +1,43 @@
+{
+  "research_question": "Compare prices for men's black Nike and Adidas running shoes in Germany",
+  "marketplaces": {
+    "amazon": ["amazon.de"],
+    "ebay": ["ebay.de"],
+    "zalando": ["zalando.de"]
+  },
+  "searches": [
+    {
+      "search_term": "Nike black running shoes men",
+      "product_type": "Running Shoes",
+      "include": ["nike"],
+      "exclude": ["kids", "children", "used", "bag", "replacement"],
+      "audiences": ["men"]
+    },
+    {
+      "search_term": "Adidas black running shoes men",
+      "product_type": "Running Shoes",
+      "include": ["adidas"],
+      "exclude": ["kids", "children", "used", "bag", "replacement"],
+      "audiences": ["men"]
+    }
+  ],
+  "target_results": 100,
+  "headless": true,
+  "pages": 1,
+  "retries": 2,
+  "delay_seconds": [2.5, 4.5],
+  "output_dir": "output",
+  "cleaning": {
+    "remove_sponsored": true,
+    "remove_no_price": true,
+    "remove_duplicates": true,
+    "remove_outliers": true,
+    "outlier_pct": 99
+  },
+  "review": {
+    "instruction": "Keep only complete men's Nike or Adidas black running shoes. Exclude accessories, used products and children's products.",
+    "batch_size": 30,
+    "minimum_keep_confidence": 0.8,
+    "allowed_brands": ["nike", "adidas"]
+  }
+}

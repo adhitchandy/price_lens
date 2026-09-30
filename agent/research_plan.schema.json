@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Price Lens Research Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["research_question", "marketplaces", "searches"],
+  "properties": {
+    "research_question": {"type": "string", "minLength": 1},
+    "marketplaces": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "amazon": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "ebay": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "zalando": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "mediamarkt": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "searches": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["search_term", "product_type"],
+        "properties": {
+          "search_term": {"type": "string", "minLength": 1},
+          "product_type": {"type": "string", "minLength": 1},
+          "include": {"type": "array", "items": {"type": "string"}},
+          "exclude": {"type": "array", "items": {"type": "string"}},
+          "localized_queries": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["search_term", "language"],
+              "properties": {
+                "search_term": {"type": "string", "minLength": 1},
+                "language": {"type": "string", "minLength": 2},
+                "include": {"type": "array", "items": {"type": "string"}},
+                "exclude": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          },
+          "platforms": {"type": "array", "uniqueItems": true, "items": {"enum": ["amazon", "ebay", "zalando", "mediamarkt"]}},
+          "audiences": {"type": "array", "uniqueItems": true, "items": {"enum": ["men", "women", "kids"]}}
+        }
+      }
+    },
+    "target_results": {"type": ["integer", "null"], "minimum": 1, "maximum": 100000},
+    "require_localized_queries": {"type": "boolean", "default": false},
+    "headless": {"type": "boolean"},
+    "pages": {"type": "integer", "minimum": 1, "maximum": 20},
+    "retries": {"type": "integer", "minimum": 0, "maximum": 5},
+    "delay_seconds": {
+      "type": "array",
+      "prefixItems": [{"type": "number", "minimum": 0.5}, {"type": "number", "minimum": 0.5, "maximum": 60}],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "output_dir": {"type": "string"},
+    "cleaning": {"type": "object"},
+    "postcodes": {"type": "object", "additionalProperties": {"type": "string"}},
+    "set_location": {"type": "boolean"},
+    "enrich_details": {"type": "boolean"},
+    "max_detail_products": {"type": ["integer", "null"], "minimum": 1, "maximum": 1000},
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "instruction": {"type": "string", "minLength": 1},
+        "batch_size": {"type": "integer", "minimum": 1, "maximum": 500},
+        "minimum_keep_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "allowed_brands": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "schema_version": "analyst-v1",
+  "research_question": "Sneaker prices in all configured countries, and washing machines in Germany and Austria.",
+  "settings": {
+    "pages": 1,
+    "retries": 2,
+    "headless": false,
+    "delay_seconds": [
+      2.5,
+      4.5
+    ],
+    "enrich_details": false,
+    "max_detail_products": 30
+  },
+  "searches": [
+    {
+      "search_term": "sneakers",
+      "product_type": "Sneakers",
+      "countries": [
+        "all"
+      ],
+      "platforms": [
+        "amazon",
+        "ebay",
+        "zalando"
+      ],
+      "audiences": [
+        "men",
+        "women",
+        "kids"
+      ],
+      "translations": {
+        "en": {
+          "search_term": "sneakers",
+          "include": [],
+          "exclude": []
+        },
+        "de": {
+          "search_term": "Sneaker",
+          "include": [],
+          "exclude": []
+        },
+        "fr": {
+          "search_term": "baskets",
+          "include": [],
+          "exclude": []
+        },
+        "es": {
+          "search_term": "zapatillas deportivas",
+          "include": [],
+          "exclude": []
+        },
+        "it": {
+          "search_term": "sneakers",
+          "include": [],
+          "exclude": []
+        },
+        "nl": {
+          "search_term": "sneakers",
+          "include": [],
+          "exclude": []
+        },
+        "pt": {
+          "search_term": "sapatilhas",
+          "include": [],
+          "exclude": []
+        },
+        "pl": {
+          "search_term": "sneakersy",
+          "include": [],
+          "exclude": []
+        },
+        "hu": {
+          "search_term": "sportcipők",
+          "include": [],
+          "exclude": []
+        },
+        "tr": {
+          "search_term": "spor ayakkabı",
+          "include": [],
+          "exclude": []
+        },
+        "ja": {
+          "search_term": "スニーカー",
+          "include": [],
+          "exclude": []
+        },
+        "sv": {
+          "search_term": "sneakers",
+          "include": [],
+          "exclude": []
+        },
+        "ar": {
+          "search_term": "أحذية رياضية",
+          "include": [],
+          "exclude": []
+        },
+        "bg": {
+          "search_term": "маратонки",
+          "include": [],
+          "exclude": []
+        },
+        "hr": {
+          "search_term": "tenisice",
+          "include": [],
+          "exclude": []
+        },
+        "cs": {
+          "search_term": "tenisky",
+          "include": [],
+          "exclude": []
+        },
+        "da": {
+          "search_term": "sneakers",
+          "include": [],
+          "exclude": []
+        },
+        "et": {
+          "search_term": "tossud",
+          "include": [],
+          "exclude": []
+        },
+        "fi": {
+          "search_term": "tennarit",
+          "include": [],
+          "exclude": []
+        },
+        "el": {
+          "search_term": "αθλητικά παπούτσια",
+          "include": [],
+          "exclude": []
+        },
+        "lv": {
+          "search_term": "sporta apavi",
+          "include": [],
+          "exclude": []
+        },
+        "lt": {
+          "search_term": "sportbačiai",
+          "include": [],
+          "exclude": []
+        },
+        "no": {
+          "search_term": "joggesko",
+          "include": [],
+          "exclude": []
+        },
+        "ro": {
+          "search_term": "pantofi sport",
+          "include": [],
+          "exclude": []
+        },
+        "sk": {
+          "search_term": "tenisky",
+          "include": [],
+          "exclude": []
+        },
+        "sl": {
+          "search_term": "superge",
+          "include": [],
+          "exclude": []
+        }
+      }
+    },
+    {
+      "search_term": "washing machines",
+      "product_type": "Washing machines",
+      "countries": [
+        "Germany",
+        "Austria"
+      ],
+      "platforms": [
+        "amazon",
+        "ebay",
+        "mediamarkt"
+      ],
+      "audiences": [],
+      "translations": {
+        "de": {
+          "search_term": "Waschmaschine",
+          "include": [],
+          "exclude": []
+        }
+      }
+    }
+  ]
+}

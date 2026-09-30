@@ -1,0 +1,18 @@
+# Look of the app (matches the Results / live-run screens in apps/pi_ui/web).
+[theme]
+base = "dark"
+primaryColor = "#C8F169"
+backgroundColor = "#0E1013"
+secondaryBackgroundColor = "#15181C"
+textColor = "#EDEEF0"
+linkColor = "#C8F169"
+borderColor = "#262B31"
+showWidgetBorder = true
+baseRadius = "10px"
+font = "Geist:https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
+codeFont = "'Geist Mono':https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap"
+dataframeHeaderBackgroundColor = "#1A1E23"
+
+[theme.sidebar]
+backgroundColor = "#111418"
+secondaryBackgroundColor = "#1A1E23"

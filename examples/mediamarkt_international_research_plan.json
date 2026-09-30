@@ -1,0 +1,40 @@
+{
+  "research_question": "Collect smartphone listings across MediaMarkt country storefronts",
+  "marketplaces": {
+    "mediamarkt": [
+      "mediamarkt.de", "mediamarkt.at", "mediamarkt.ch", "mediamarkt.es",
+      "mediamarkt.nl", "mediamarkt.be", "mediamarkt.pl", "mediamarkt.hu",
+      "mediamarkt.pt", "mediamarkt.com.tr", "mediaworld.it"
+    ]
+  },
+  "require_localized_queries": true,
+  "searches": [{
+    "search_term": "smartphones",
+    "product_type": "Smartphone",
+    "localized_queries": {
+      "mediamarkt.de": {"language": "de", "search_term": "Smartphones"},
+      "mediamarkt.at": {"language": "de", "search_term": "Smartphones"},
+      "mediamarkt.ch": {"language": "de", "search_term": "Smartphones"},
+      "mediamarkt.es": {"language": "es", "search_term": "teléfonos móviles"},
+      "mediamarkt.nl": {"language": "nl", "search_term": "smartphones"},
+      "mediamarkt.be": {"language": "nl", "search_term": "smartphones"},
+      "mediamarkt.pl": {"language": "pl", "search_term": "smartfony"},
+      "mediamarkt.hu": {"language": "hu", "search_term": "okostelefon"},
+      "mediamarkt.pt": {"language": "pt", "search_term": "telemóveis"},
+      "mediamarkt.com.tr": {"language": "tr", "search_term": "akıllı telefon"},
+      "mediaworld.it": {"language": "it", "search_term": "smartphone"}
+    }
+  }],
+  "pages": 3,
+  "retries": 2,
+  "headless": false,
+  "delay_seconds": [2.5, 4.5],
+  "enrich_details": false,
+  "output_dir": "output",
+  "cleaning": {"remove_outliers": false},
+  "review": {
+    "instruction": "Keep complete smartphones; exclude accessories and services. Treat missing condition evidence as uncertain.",
+    "batch_size": 30,
+    "minimum_keep_confidence": 0.8
+  }
+}

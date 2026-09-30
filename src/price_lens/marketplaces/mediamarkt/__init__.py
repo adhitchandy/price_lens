@@ -1,0 +1,2 @@
+"""MediaMarkt marketplace adapter."""
+

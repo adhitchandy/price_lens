@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Price Lens</title>
+<script src="/js/theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/app.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" aria-label="Price Lens">
+    <a class="brand" href="#/">
+      <span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"></path><circle cx="15.5" cy="8.5" r="1.5"></circle></svg></span>
+      <span class="brand-name">Price Lens</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#/" data-nav="researches"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg>Researches<span class="live-dot" id="live-dot" hidden title="A collection is running"></span></a>
+      <a href="#/new" data-nav="new"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New research</a>
+      <a href="#/storefronts" data-nav="storefronts"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"></path></svg>Storefront health</a>
+      <a href="#/fx" data-nav="fx"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h14l-4-4"></path><path d="M20 16H6l4 4"></path></svg>Exchange rates</a>
+      <a href="#/settings" data-nav="settings"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"></path></svg>Settings</a>
+    </nav>
+    <div class="side-foot">
+      <div class="seg theme" role="group" aria-label="Appearance">
+        <button type="button" data-theme-set="light">Light</button>
+        <button type="button" data-theme-set="dark">Dark</button>
+        <button type="button" data-theme-set="system">System</button>
+      </div>
+      <div class="where"><span>Runs stored in</span><span class="mono" id="output-dir">output</span></div>
+    </div>
+  </aside>
+  <main class="view" id="view" tabindex="-1"><p class="loading">Loading…</p></main>
+</div>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>

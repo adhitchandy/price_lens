@@ -1,0 +1,37 @@
+{
+  "research_question": "Compare prices for new Google Pixel smartphones in Germany",
+  "marketplaces": {
+    "amazon": ["amazon.de"],
+    "ebay": ["ebay.de"],
+    "mediamarkt": ["mediamarkt.de"]
+  },
+  "searches": [
+    {
+      "search_term": "Google Pixel smartphone",
+      "product_type": "Smartphone",
+      "include": ["pixel"],
+      "exclude": ["case", "cover", "screen protector", "used"]
+    }
+  ],
+  "target_results": 50,
+  "headless": true,
+  "pages": 1,
+  "retries": 2,
+  "delay_seconds": [2.5, 4.5],
+  "enrich_details": true,
+  "max_detail_products": 20,
+  "output_dir": "output",
+  "cleaning": {
+    "remove_sponsored": true,
+    "remove_no_price": true,
+    "remove_duplicates": true,
+    "remove_outliers": true,
+    "outlier_pct": 99
+  },
+  "review": {
+    "instruction": "Keep complete new Google Pixel smartphones. Exclude cases, covers, screen protectors, spare parts, contracts without a handset, and used products.",
+    "batch_size": 30,
+    "minimum_keep_confidence": 0.8,
+    "allowed_brands": ["google"]
+  }
+}

@@ -1,0 +1,18 @@
+# Keep line endings right on both Windows and Mac, whoever commits.
+* text=auto eol=lf
+
+# Windows launchers need Windows line endings
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Mac/Linux launchers need Unix line endings
+*.command text eol=lf
+*.sh text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.ico binary
+*.xlsx binary
+*.pdf binary
+*.zip binary

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Product Relevance Decisions",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decisions"],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["row_id", "keep", "category", "confidence", "reason"],
+        "properties": {
+          "row_id": {"type": "string", "minLength": 1},
+          "keep": {"type": "boolean"},
+          "category": {"type": "string", "minLength": 1},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

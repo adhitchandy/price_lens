@@ -1,0 +1,26 @@
+{
+  "searches": [
+    {
+      "search_term": "running shoes",
+      "product_type": "Running Shoes",
+      "audiences": ["men"],
+      "include": ["running", "trainer", "shoe"],
+      "exclude": ["sock", "insole", "bag"]
+    }
+  ],
+  "marketplaces": ["zalando.de"],
+  "headless": true,
+  "pages": 1,
+  "retries": 2,
+  "delay_seconds": [1.5, 3.5],
+  "enrich_details": true,
+  "max_detail_products": 25,
+  "output_dir": "output",
+  "cleaning": {
+    "remove_sponsored": true,
+    "remove_no_price": true,
+    "remove_duplicates": true,
+    "remove_outliers": true,
+    "outlier_pct": 99
+  }
+}

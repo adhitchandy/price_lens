@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------------------
+# Your research data and settings stay on your own computer
+# ---------------------------------------------------------------------------
+output/
+# scratch plan written by the AI-agent workflow (see agent/SKILL.md)
+/research_plan.json
+# browser driver log
+geckodriver.log
+*.log
+
+# ---------------------------------------------------------------------------
+# Python environment and build files (recreated by setup_windows.bat / setup_mac.command)
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Secrets (never commit API keys)
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.key
+
+# ---------------------------------------------------------------------------
+# Operating system and editor clutter
+# ---------------------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+*.swp
+.idea/
+.vscode/*
+!.vscode/settings.json

@@ -1,0 +1,36 @@
+{
+  "searches": [
+    {
+      "search_term": "digital camera",
+      "product_type": "Digital Camera",
+      "include": ["camera", "mirrorless", "dslr"],
+      "exclude": ["case", "battery", "charger", "toy", "webcam"]
+    }
+  ],
+  "marketplaces": [
+    "ebay.com",
+    "ebay.co.uk",
+    "ebay.de",
+    "ebay.fr",
+    "ebay.it",
+    "ebay.es",
+    "ebay.ca",
+    "ebay.com.au",
+    "ebay.at",
+    "ebay.nl",
+    "ebay.ie"
+  ],
+  "headless": true,
+  "pages": 1,
+  "retries": 1,
+  "delay_seconds": [2.5, 4.5],
+  "output_dir": "output",
+  "cleaning": {
+    "remove_sponsored": true,
+    "remove_no_price": true,
+    "remove_no_rating": false,
+    "remove_duplicates": true,
+    "remove_outliers": true,
+    "outlier_pct": 99
+  }
+}
