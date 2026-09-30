@@ -164,6 +164,9 @@ model. Never put a key into a file inside the project folder.
 
 ## For developers and AI agents
 
+- **Developer guide**: how the program works, the important files, debugging, and how to
+  make common changes. See [docs/DEVELOPER_GUIDE.md](docs/DEVELOPER_GUIDE.md). **Start here
+  if you take over the project.**
 - **Technical reference**: command line, JSON plan format, AI-agent workflow, result fields,
   scrapers. See [docs/TECHNICAL.md](docs/TECHNICAL.md).
 - **AI agents** (Claude Code, Copilot, …) doing research from the command line follow
